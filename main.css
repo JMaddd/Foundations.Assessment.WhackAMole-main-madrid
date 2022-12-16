@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: #C6C6C6;
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: #909090;
+}
+
+#title {
+    color: white;
+    font-size: larger;
+}
+
+#mainGame {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#playingField {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.holes {
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border-radius: 50px;
+}
+
+.hole {
+    position: absolute;
+    height: 150px;
+}
+
+.mole {
+    display: none;
+    position: absolute;
+    height: 100px;
+    padding: 0;
+}
+
+#buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    margin: 10px;
+    border-radius: 30px;
+    border: solid white 2px;
+}
+
+#scoreCounter {
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50px;
+}
+
+footer {
+    position: fixed; 
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #909090
+}
+
+/* \
+display = none means it goes away
+display = block means it appears again
+ */
