@@ -34,11 +34,15 @@ startBtn.addEventListener('click', () => {
 
         counter += 1;
         score.innerHTML = `Score Counter: ${counter}`;
-        //Reset display values to none, then choose a new pochita
+        //A loop is used to reset display values to none, then choose a new pochita
         for (let pochita = 0; pochita < arrOfPochitas.length; pochita++) {
             arrOfPochitas[pochita].style.display = 'none'
         }
     }
+    /*
+    A loop is used here to set an event listener for each image, so that if it's clicked, the hitPochita function
+    runs, and the score counter gets incremented by one. 
+    */
     for (let pochita = 0; pochita < arrOfPochitas.length; pochita++) {
         let arrOfPochitas = document.querySelectorAll('.pochita');
 
@@ -70,14 +74,18 @@ resetBtn.addEventListener('click', () => {
     let arrOfHoles = document.querySelectorAll('.holes');
     let arrOfPochitas = document.querySelectorAll('.pochita');
 
+    //Resets the counter to 0 and changes the number displayed on the webpage to 0
     counter = 0;
     score.innerHTML = `Score Counter: ${counter}`;
+    //Resets the display values of all the pochita images
     for (let pochita = 0; pochita < arrOfPochitas.length; pochita++) {
         arrOfPochitas[pochita].style.display = 'none'
     }
+    //If playing in psycho mode, the reset button removes all the holes and pochitas
     for (let hole = 0; hole < arrOfHoles.length; hole++) {
         playingField.removeChild(arrOfHoles[hole]);
     }
+    //This loop resets the grid to the default when you launch the game (3x3 or 9 total holes/pochitas)
     for (let holeNum = 1; holeNum <= 9; holeNum++) {
         let hole = document.createElement('div');
         hole.classList.add('holes');
@@ -113,16 +121,15 @@ function psycho () {
     
     counter = 0;
     score.innerHTML = `Score Counter: ${counter}`;
-
+    //This conditional resized the container holding all the holes and pochitas, so that it looks nicer 
     if (numOfHoles > 9) {
             playingField.style.height = 100 + "%"; 
             playingField.style.width = 100 + "%";
-        }
-        
+        }   
+    //The loops below follow the same logic as the loops used in the reset button. 
     for (let hole = 0; hole < arrOfHoles.length; hole++) {
         playingField.removeChild(arrOfHoles[hole]);
     }
-    
     for (let holeNum = 1; holeNum <= numOfHoles; holeNum++) {
         let hole = document.createElement('div');
         hole.classList.add('holes');
