@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #C6C6C6;
+    background-color: white;
     padding-top: 65px;
     padding-bottom: 65px;
 }
@@ -13,12 +13,23 @@ header {
     align-items: center;
     height: 60px;
     width: 100%;
-    background-color: #909090;
+}
+
+#logo {
+    height: 100%;
+    margin-left: 50px;
+    margin-top: 10px;
+    border-radius: 30px;
+}
+
+#logo2 {
+    transform: rotate();
 }
 
 #title {
-    color: white;
+    color: black;
     font-size: larger;
+    font-family:cursive;
 }
 
 #mainGame {
@@ -52,25 +63,23 @@ header {
 
 .hole {
     position: absolute;
-    height: 150px;
+    height: 175px;
 }
 
-.mole {
+.pochita {
     display: none;
     position: absolute;
-    height: 100px;
-    padding: 0;
+    height: 125px;
 }
 
 #buttons {
     display: flex;
-    justify-content: space-between;
 }
 
 button {
-    margin: 10px;
+    margin: 15px;
     border-radius: 30px;
-    border: solid white 2px;
+    border: solid black 2px;
 }
 
 #scoreCounter {
@@ -79,18 +88,6 @@ button {
     width: 200px;
     background-color: white;
     text-align: center;
+    border: solid black 2px;
     border-radius: 50px;
 }
-
-footer {
-    position: fixed; 
-    bottom: 0;
-    height: 60px;
-    width: 100%;
-    background-color: #909090
-}
-
-/* \
-display = none means it goes away
-display = block means it appears again
- */
